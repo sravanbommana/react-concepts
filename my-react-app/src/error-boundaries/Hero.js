@@ -1,4 +1,5 @@
 import React from 'react'
+import { withErrorBoundaries } from '../hoc/withErrrorBoundaries';
 
 function Hero(props) {
   if(props.role === 'Joker') {
@@ -11,4 +12,4 @@ function Hero(props) {
   )
 }
 
-export default Hero
+export default withErrorBoundaries(Hero);

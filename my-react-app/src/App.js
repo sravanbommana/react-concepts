@@ -10,18 +10,23 @@ import { useState } from "react";
 import Menu from "./dumb-components/Menu";
 import ChangeColor from "./dumb-components/ChangeColor";
 import ThemeProvider from "./context/ThemeProvider";
+import User from "./method-as-props/User";
+import ConditionalExample from "./conditional-rendering/ConditionalExample";
+import List from "./render-list/List";
+import StyleComp from "./style-components-css/StyleComp";
+import UserForm from "./form-handling/UserForm";
+import MountingMethods from "./life-cycle-methods/MountingMethods";
+import UpdateMethods from "./life-cycle-methods/UpdateMethods";
+import ParentComponentOne from "./pure-components/ParentComponentOne";
+import InputRef from "./ref/input-ref/InputRef";
+import CallbackRef from "./ref/callback-ref/CallbackRef";
 
 function App() {
   return (
     <div className="App">
       {/* Error Boundaries code */}
-      {/* <ErrorBoundaries>
         <Hero role="Test2" />
-      </ErrorBoundaries>
-      <ErrorBoundaries>
         <Hero role="Joker" />
-      </ErrorBoundaries> */}
-
       {/* Data Sharing */}
       {/* <ParentComponent /> */}
 
@@ -31,6 +36,16 @@ function App() {
       <ThemeProvider>
         <Menu />
         <ChangeColor />
+        <User/>
+        <ConditionalExample />
+        <List />
+        <StyleComp />
+        <UserForm />
+        <MountingMethods />
+        <UpdateMethods />
+        <ParentComponentOne />
+        <InputRef />
+        <CallbackRef />
       </ThemeProvider>
     </div>
   );
