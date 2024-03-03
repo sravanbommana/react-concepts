@@ -20,6 +20,12 @@ import UpdateMethods from "./life-cycle-methods/UpdateMethods";
 import ParentComponentOne from "./pure-components/ParentComponentOne";
 import InputRef from "./ref/input-ref/InputRef";
 import CallbackRef from "./ref/callback-ref/CallbackRef";
+import ClickCounter from "./render-props/basic-example/ClickCounter";
+import HoverCounter from "./render-props/basic-example/HoverCounter";
+import UserDemo from "./render-props/basic-example/UserDemo";
+import CounterOne from "./render-props/basic-example/CounterOne";
+import FocusInput from "./component-ref/FocusInput";
+import ForwardRefParentInput from "./forward-ref/ForwardRefParentInput";
 
 function App() {
   return (
@@ -46,6 +52,17 @@ function App() {
         <ParentComponentOne />
         <InputRef />
         <CallbackRef />
+        <CounterOne 
+          render={(count, incrementCount) => (
+            <ClickCounter count={count} incrementCount={incrementCount} />
+          )}
+        />
+        <CounterOne 
+          render={(count, incrementCount) => <HoverCounter count={count} incrementCount={incrementCount} /> } />
+
+        <UserDemo name={(isLoggedIn) => isLoggedIn ? "Sravan" : "Guest"} />
+        <FocusInput />
+        <ForwardRefParentInput />
       </ThemeProvider>
     </div>
   );
