@@ -1,0 +1,12 @@
+.container {
+  max-width: 40%;
+  border: 3px solid lightgray;
+  padding: 10px;
+  margin-left: 300px;
+  align:center
+}
+.title-header {
+  margin-top:140px;
+   margin-left:-180px;
+  font-size:30px
+}
